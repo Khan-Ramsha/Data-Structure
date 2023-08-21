@@ -1,4 +1,11 @@
-// A program to find duplicate number
+/*
+A program to find duplicate number
+Algorithm 
+Step 1 : Ask for the elements
+Step 2 : Display the elements by looping
+Step 3 : Compare the elements (2 elements at a time) check if the values are equal and if the index is same
+Step 4 : If index is same and values are same means Duplication is there so print values duplicate.
+*/
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
