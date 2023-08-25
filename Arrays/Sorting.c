@@ -1,4 +1,5 @@
-//A simple program to sort the array elements.
+//A simple program to sort the array elements.(Ascending Sort)
+
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
