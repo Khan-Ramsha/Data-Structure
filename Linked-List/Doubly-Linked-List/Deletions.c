@@ -55,6 +55,7 @@ int main()
     third->next = NULL;
     traversal(head);
     head = delatend(head);
+    head=delatbeg(head);
     traversal(head);
     return 0;
 }
