@@ -16,7 +16,7 @@ void traversal(struct Node *ptr)
 }
 struct Node * del_beg(struct Node * head)
 {
-    struct Node * ptr = (struct Node *)malloc(sizeof(struct Node));
+    struct Node * ptr;
     ptr=head;
     head = head->next;
     free(ptr);
@@ -30,7 +30,7 @@ int main()
     second = (struct Node *)malloc(sizeof(struct Node));
     head->data = 5;
     head->next = second;
-    second->data = 10;
+    second->data = 11;
     second->next = NULL;
     head=del_beg(head);
     traversal(head);
