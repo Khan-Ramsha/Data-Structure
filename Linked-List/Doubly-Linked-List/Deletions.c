@@ -27,11 +27,27 @@ struct Node *delatend(struct Node *head)
 {
     struct Node *ptr = head;
     struct Node *q = ptr->next;
-    while(q->next!=NULL){
-        q=q->next;
-        ptr=ptr->next;
+    while (q->next != NULL)
+    {
+        q = q->next;
+        ptr = ptr->next;
     }
-    ptr->next=NULL;
+    ptr->next = NULL;
+    free(q);
+    return head;
+}
+struct Node *delinbet(struct Node *head, int index)
+{
+    struct Node *ptr = head;
+    struct Node *q = ptr->next;
+    int i = 0;
+    while (i != index - 1)
+    {
+        q = q->next;
+        ptr = ptr->next;
+        i++;
+    }
+    ptr->next = q->next;
     free(q);
     return head;
 }
@@ -54,8 +70,10 @@ int main()
     third->data = 3;
     third->next = NULL;
     traversal(head);
-    head = delatend(head);
-    head=delatbeg(head);
+    // head = delatend(head);
+    // head = delatbeg(head);
+    head = delinbet(head,2);
+
     traversal(head);
     return 0;
 }
